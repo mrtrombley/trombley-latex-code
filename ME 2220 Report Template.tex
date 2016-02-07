@@ -1,0 +1,67 @@
+\documentclass [12pt,fleqn] {article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{fancyvrb}
+\usepackage{geometry}
+\setlength{\topmargin}{-0.75in}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{-.25in}
+\setlength{\textwidth}{7in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\clearpage
+\thispagestyle{empty}
+\doublespacing
+\AtBeginDocument{
+  \addtolength\abovedisplayskip{-0.2\baselineskip}
+  \addtolength\belowdisplayskip{-0.2\baselineskip}
+}
+%\begin{figure}[h!]
+%	\begin{center}
+%		\includegraphics[scale=0.5]{wire}
+%	\end{center}
+%	\caption{Schematics of the wiring diagram used in the PDT calibration. \cite{labmanual}} \label{fig:wire}
+%\end{figure}
+
+\begin{document}
+\newgeometry{left=0.75in,right=0.75in,bottom=0.1cm,top=.25in}
+%%%%%%
+\begin{Verbatim}[baselinestretch=1.00] 
+I certify that all the writing presented here is my own and not acquired from external 
+sources (including the student lab manual). I have cited sources appropriately and 
+paraphrased correctly. I have not shared my writing with other students, nor have I 
+acquired any written portion of this document from past or present students.
+\end{Verbatim}
+%%%%%%
+\begin{center}
+	\huge{\textbf{Title}} \\
+	\large{\textbf{Matt Trombley}} \vspace{-5mm}
+\end{center}
+%%%%%%
+\section{Introduction} \vspace{-5mm}
+%%%%%%
+\restoregeometry
+\section{Methods and Materials}
+%%%%%%
+\section{Results and Discussion} \vspace{-3mm}
+%%%%%%
+\par The values in this section were calculated using the following MATLAB code. 
+	\scriptsize\begin{Verbatim}[baselinestretch=1.00]
+	\end{Verbatim}
+\normalsize \vspace{-10mm}
+%%%%%%
+\section{Conclusion} 
+%%%%%%
+\newpage
+\renewcommand{\refname}{\normalfont\selectfont\normalsize \textbf{References}} 
+\begin{thebibliography}{3}
+\bibitem{bibitem1} 
+\bibitem{bibitem2} 
+\end{thebibliography}
+\end{document}
