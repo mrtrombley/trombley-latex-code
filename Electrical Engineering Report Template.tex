@@ -1,0 +1,62 @@
+\documentclass [12pt,fleqn] {article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{fancyvrb}
+\setlength{\topmargin}{-0.75in}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{-.25in}
+\setlength{\textwidth}{7in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\clearpage
+\doublespacing
+\AtBeginDocument{
+  \addtolength\abovedisplayskip{-0.2\baselineskip}
+  \addtolength\belowdisplayskip{-0.2\baselineskip}
+}
+\newcommand*{\SignatureAndDate}[1]{%
+    \par\noindent\makebox[2.5in]{\hrulefill} \hfill\makebox[2.0in]{\hrulefill}%
+    \par\noindent\makebox[2.5in][l]{#1}      \hfill\makebox[2.0in][l]{Date}%
+}%
+%\begin{figure}[h!]
+%	\begin{center}
+%		\includegraphics[scale=0.5]{wire}
+%	\end{center}
+%	\caption{Schematics of the wiring diagram used in the PDT calibration. \cite{labmanual}} \label{fig:wire}
+%\end{figure}
+
+\begin{document}
+%%%%%%
+\begin{center}
+	\huge{\textbf{Title}} \\
+	\Large{\textbf{Matt Trombley}} \\
+	\large{Lab \# - ECE 2080-004}
+\end{center}
+%%%%%%
+\section{Objectives}
+%%%%%%
+\section{Equipment}
+%%%%%%
+\section{Procedure}
+%%%%%%
+\section{Observation \& Discussion} 
+%%%%%%
+\section{Conclusion}
+\newpage
+\renewcommand{\refname}{\normalfont\selectfont\normalsize \textbf{References}} 
+\begin{thebibliography}{3}
+\bibitem{bibitem1} 
+\bibitem{bibitem2} 
+\end{thebibliography}
+\begin{center}
+\underline{\textbf{Pledge}}
+\end{center} \\
+"This report is my own work, done without any assistance from other students or reports." \\ \vspace{5mm}
+\SignatureAndDate{Student}
+\end{document}
