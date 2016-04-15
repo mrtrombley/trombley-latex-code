@@ -1,0 +1,55 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\setlist{nolistsep}
+\pagestyle{empty}
+\setlength{\topmargin}{-1.2in}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{-.6in}
+\setlength{\textwidth}{7in}
+\begin{document}
+Theory of Probability Proofs \\
+\rule{7.6in}{0.4pt}\\
+\begin{itemize}
+	\item If $P(A) > 0, P(B) > 0, P(A \cap B^c) = P(B \cap A^c)$, show $P(A|B) = P(B|A)$
+		\begin{itemize}
+			\item $P(A) = P(A \cap B^c) + P(A \cap B) = P(B \cap A^c) + P(A \cap B) = P(B) > 0$
+			\item $P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A \cap B)}{P(A)} = P(B|A)$ \\
+		\end{itemize}
+	\item Random variable X $\sim$ Geometric(p), show that $E(X) = 1/p$
+		\begin{itemize}
+			\item $E(X) = \sum\limits_{k=1}^\infty k\cdot p(k) = \sum\limits_{k=1}^\infty k(1-p)^{k-1}p$
+			\item $(1-p)E(X) = \sum\limits_{k=1}^\infty k(1-p)^kp$, let $k = j-1$
+			\item $= \sum\limits_{j=2}^\infty (j-1)(1-p)^{j-1}p$
+			\item $E(X) - (1-p)E(X) = 1\cdot (1-p)^{1-1}\cdot p + \sum\limits_{k=2}^\infty (1-p)^{k-1}p = 1$
+			\item $pE(X) = 1 \rightarrow E(X) = 1/p$ \\
+		\end{itemize}
+	\item X is a random variable, show that $E(X^2) \geq [E(X)]^2$
+		\begin{itemize}
+			\item $Var(X) = E(X^2) - [E(X)]^2 \geq 0$ \\
+		\end{itemize}
+	\item Random variable X $\sim$ Bin(n,p), show that $E(X) = np$ 
+		\begin{itemize}
+			\item $E(X) = \sum\limits_{k=0}^n k\cdot {n \choose k}p^k(1-p)^{n-k} $
+			\item $= \sum\limits_{k=1}^n k{n-1 \choose k-1}\frac{n}{k} \cdot p^{k-1} \cdot p \cdot (1-p)^{(n-1) - (k-1)}$, let $j = k-1$
+			\item $= np\sum\limits_{j=0}^{n-1} {n-1 \choose k-1}p^{k-1} (1-p)^{(n-1)-(k-1)} = np\cdot [p+(1-p)]^{n-1} = np$ \\
+		\end{itemize}
+	\item Drawing $n$ distinct items, number of ways to draw $r$ of them
+		\begin{itemize}
+			\item Without replacement \& order matters- $n!/(n-r)!$
+			\item With replacement \& order matters- $n^r$
+			\item Without replacement \& order doesn't matter- ${n \choose r} = n!/(n-r)!r!$ \\
+		\end{itemize}
+	\item If $E \subset F$ and $F \subset E$ then $E=F$
+	\item If $E \subset F$, then $P(E) \leq P(F)$
+	\item $F = E \cup E^cF, P(F) = P(E) + P(E^cF) $ since $ P(E^cF) \geq 0$ \\
+	\item Prove that $P(E \cup F) = P(E) + P(F) - P(EF)$
+		\begin{itemize}
+			\item $P(E \cup F) = P(E \cup E^cF) = P(E) + P(E^cF)$
+			\item $F = EF \cup E^cF, P(F) = P(EF) + P(E^cF), P(E^cF) = P(F) - P(EF)$
+		\end{itemize}
+\end{itemize}
+\end{document}

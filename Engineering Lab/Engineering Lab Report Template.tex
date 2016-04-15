@@ -1,0 +1,63 @@
+\documentclass [12pt,fleqn] {article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{fancyvrb}
+\usepackage{geometry}
+\setlength{\topmargin}{-0.75in}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{-.25in}
+\setlength{\textwidth}{7in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\clearpage
+\thispagestyle{empty}
+\singlespacing
+\AtBeginDocument{
+  \addtolength\abovedisplayskip{-0.2\baselineskip}
+  \addtolength\belowdisplayskip{-0.2\baselineskip}
+}
+\newcommand*{\SignatureAndDate}[1]{%
+    \par\noindent\makebox[2.5in]{\hrulefill} \hfill\makebox[2.0in]{\hrulefill}%
+    \par\noindent\makebox[2.5in][l]{#1}\hfill\makebox[2.0in][l]{Date}%
+}
+%Code to include a figure
+%
+%\begin{figure}[h!]
+%	\begin{center}
+%		\includegraphics[scale=0.5]{wire}
+%	\end{center}
+%	\caption{Schematics of the wiring diagram used in the PDT calibration. \cite{labmanual}} \label{fig:wire}
+%\end{figure}
+\begin{document}
+I certify that all the writing presented here is my own and not acquired from external 
+sources (including the student lab manual). I have cited sources appropriately and 
+paraphrased correctly. I have not shared my writing with other students, nor have I 
+acquired any written portion of this document from past or present students. \\
+\SignatureAndDate{Student}
+\begin{center}
+	\huge{\textbf{Lab Title}} \\\vspace{2mm}
+	\large{\textbf{Name}} \\\vspace{2mm}
+	Class and Section \hspace{5mm} Date \vspace{-5mm}
+\end{center}
+\doublespacing
+\section{Introduction}
+%%%%%%
+\section{Methods and Materials}
+%%%%%%
+\section{Results and Discussion} \vspace{-3mm}
+%%%%%%
+\section{Conclusion} 
+%%%%%%
+\newpage
+\renewcommand{\refname}{\normalfont\selectfont\normalsize \textbf{References}} 
+\begin{thebibliography}{3}
+\bibitem{bibitem1} 
+\bibitem{bibitem2} 
+\end{thebibliography}
+\end{document}

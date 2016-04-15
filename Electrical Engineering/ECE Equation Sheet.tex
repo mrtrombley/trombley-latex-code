@@ -1,0 +1,377 @@
+\documentclass [12pt] {article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{gensymb}
+\pagestyle{empty}
+\setlength{\topmargin}{-1.2in}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{-.6in}
+\setlength{\textwidth}{7in}
+\begin{document}
+ECE 2070 Equation Sheet \hfill Test 1 \\
+\rule{7.6in}{0.4pt}
+\begin{multicols*}{2}
+\section{Kirchoff's Current Law} 
+	\begin{itemize}
+		\item $\sum\limits_{n=1}^N i = 0$ 
+		\item Current pointing into a node is negative, pointing out is positive
+	\end{itemize}
+\section{Kirchoff's Voltage Law}
+	\begin{itemize}
+		\item $\sum\limits^N \pm v_n = 0$
+		\item $\Delta V = IR$
+		\item Voltage rise (+V) means entering from - and going to +
+		\item Voltage drop (-V) enters at + and leaves at -
+	\end{itemize}
+\section{Resistors}
+\textbf{Series}
+	\begin{itemize}
+		\item $R_{series} = R_1 + R_2 + R_3 + \cdots$
+		\item $Q = Q_1 = Q_2 = Q_3 = \cdots $
+		\item $\Delta V = \Delta V_1 + \Delta V_2 + \Delta V_3 + \cdots$
+		\item Current same everywhere, voltage breaks up
+	\end{itemize}
+\textbf{Parallel} 
+	\begin{itemize}
+		\item $R_{parallel} = \left(\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \cdots\right)^{-1} $
+		\item $Q = Q_1 + Q_2 + Q_3 + \cdots $
+		\item $\Delta V = \Delta V_1 = \Delta V_2 = \Delta V_3 = \cdots $
+		\item Voltage same everywhere, current breaks up 
+	\end{itemize}
+\section{Power}
+	\begin{itemize}
+		\item $P = I\Delta V = RI^2 = \frac{\Delta V^2}{R}$ 
+		\item When current flows into +, power is dissipated (P = IV) 
+		\item When current flows into -, power is supplied (P = -IV) 
+		\item 1 W = 1 V$\cdot$A 
+	\end{itemize}
+\section{Energy}
+	\begin{itemize}
+		\item $E = vi\Delta t ($Watt$ \cdot $seconds)
+		\item $V\cdot Ah$ approx. = Ah when voltage is implied
+	\end{itemize}
+\section{Nodal Analysis}
+	\begin{itemize}
+		\item $i_{node} = \frac{v_{node} - v_{adjacent}}{R}$ 
+		\item $\sum v_n = (i_{mesh} - i_{adjacent})R $ (mesh current) 
+		\item Node voltages uses KCL, mesh current uses KVL 
+	\end{itemize}
+\section{Equivalent Circuits}
+	\begin{itemize}
+		\item Thevenin is a single voltage source and a resistor in series 
+		\item Norton is a single current source and a resistor in parallel 
+		\item Max resistance= $P_{max} = \frac{V_{th}^2}{4R_{th}}$ 
+	\end{itemize}
+\section{Misc.}
+	\begin{itemize}
+		\item Number of equations = $n - m - 1$ \\
+		\item $I = \frac{dq}{dt}$ \\
+		\item $I_{avg} = \frac{\Delta Q}{\Delta t}$ \\
+		\item $R = \frac{\rho l}{A} = \frac{L}{\sigma A}$ \\
+		\item $\Delta V_{bat} = \epsilon - Ir$ \\
+		\item $\sum_{loop}\Delta V = 0$ \\
+		\item $\sum I_{in} = \sum I_{out}$ \\ 
+		\item $V_1 = \frac{R_n}{R_1 + R_2 + \dots}V_{tot} $ (voltage divider) \\
+		\item $I_n = \frac{\left(\frac{1}{R_1} + \frac{1}{R_2} + \dots\right)^{-1}}{R_n}I_{tot}$ (current divider) \\
+		\item If current comes from + terminal, $V = -iR$, from -, $V = iR$ \\
+		\item No current flows through open circuit or switch \\
+		\item Short circuit- $R = 0$ \\
+		\item \underline{\textbf{Constant voltage source}}- produces a constant voltage not affected by other components, current determined by connections to other components and can supply any current (car battery)\\
+		\item \underline{\textbf{Constant current source}}- produces a constant current not affected by connections to other components, voltage determined by connections to other components and can supply any voltage (cell phone charger) \\
+		\item \underline{\textbf{Terminal}}- point where a component or part of the circuit connects to other components of the circuit \\
+		\item \underline{\textbf{Node}}- connection point \\
+		\item \underline{\textbf{Branch}}- portion of a circuit with only two external terminals \\
+		\item \underline{\textbf{Loop}}- a closed connection of branches \\
+		\item \underline{\textbf{Mesh}}- a loop that does not contain other loops \\
+		\item \underline{\textbf{Voltage}}- work done to move charge between two points \\
+		\item Mesh is a loop but a loop is not necessarily a mesh
+	\end{itemize}
+\end{multicols*}
+\newpage
+ECE 2070 Equation Sheet \hfill Test 2 \\
+\rule{7.6in}{0.4pt}
+\begin{multicols*}{2}
+\section{Equivalent Circuits}
+	\begin{itemize}
+		\item Any part of the circuit with two terminals can be replaced by a single voltage source and a resistor in series for Thevenin 
+		\item Find $R_{eq}$ and find open circuit voltage for Thevenin
+		\item Any part of the circuit with two terminals can be replaced by a single current source and a resistor in parallel for Norton 
+	\end{itemize}
+\section{Loops}
+	\begin{itemize}
+		\item For analysis, $n - m - 1$ equations where $m$ is the number of dependent loops
+		\item $i_{node} = \frac{V_{node} - V_{adjacent}}{R}$
+		\item For mesh current, $\sum V_n$ around mesh
+		\item $(i_{mesh} - i_{adjacent})R$
+	\end{itemize}
+\section{Short and Open Circuits}
+	\begin{itemize}
+		\item Voltage source is a short circuit
+		\item Current source is an open circuit
+	\end{itemize}
+\section{Misc.}
+	\begin{itemize}
+		\item $P_{max} = \frac{V_{th}^2}{4R_{th}}$
+	\end{itemize}
+\end{multicols*}
+\newpage
+\section{Blank Space}
+\newpage
+ECE 2070 Equation Sheet \hfill Test 3 \\
+\rule{7.6in}{0.4pt}
+\begin{multicols*}{2}
+\section{Capacitors}
+	\begin{itemize}
+		\item $C = \frac{\epsilon_0\epsilon_rA}{D}$ Farad (F) (D = plate distance, A = plate area, $\epsilon_0\epsilon_r$ = property of material between plates)
+		\item Capacitors combined opposite of resistors
+	\end{itemize}
+\textbf{Time Domain} 
+	\begin{itemize}
+		\item $i_c(t) = C\frac{dv_c(t)}{dt}$  
+		\item $p(t) = v(t)C\frac{dv(t)}{dt} $
+		\item $W = \frac{1}{2}Cv^2(t)$
+		\item $v_s(t) = V_{max}\cos(\omega t) $
+		\item $i = CV_{max}\omega\cos(\omega t + \frac{\pi}{2}) $
+	\end{itemize}
+\textbf{Frequency Domain} 
+	\begin{itemize}
+		\item $V_C(j\omega)  = V_S(j\omega) = V_{max}\angle 0\degree$ 
+		\item $I_C(j\omega) = CV_{max}\omega\angle 90\degree$
+		\item $\frac{V_C(j\omega)}{I_C(j\omega)} = \frac{1}{C\omega}\angle -90\degree \Omega $
+	\end{itemize}
+\section{Inductors}
+	\begin{itemize}
+		\item $L = \frac{\mu_0\mu_rN^2A}{l}$ Henry (H) (A = coil area, l = coil height, $\mu_0\mu_r$ = property of core material, N = number of coil turns) 
+		\item Inductors combined same as resistors 
+	\end{itemize}
+\textbf{Time Domain} 
+	\begin{itemize}
+		\item $v_L(t) = L\frac{di_L(t)}{dt}$
+		\item $p(t) = L\frac{di(t)}{dt}i(t)$
+		\item $ W = \frac{1}{2}Li^2(t) $ 
+		\item $v_s(t) = V_{max}\cos(\omega t) $
+		\item $i = \frac{V_{max}}{\omega L}\cos(\omega t - \frac{\pi}{2}) $
+	\end{itemize}
+\textbf{Frequency Domain}
+	\begin{itemize}
+		\item $V_L(j\omega)  = V_S(j\omega) = V_{max}\angle 0\degree$
+		\item $I_L(j\omega) = \frac{V_{max}}{\omega L}\angle -90 \degree$
+		\item $\frac{V_L(j\omega}{I_L(j\omega)} = \omega L \angle 90 \degree \Omega $
+	\end{itemize}
+\section{Resistors}
+\textbf{Time Domain} 
+	\begin{itemize}
+		\item $v_s(t) = V_{max}\cos(\omega t)$
+		\item $i = \frac{V_{max}}{R}\cos(\omega t)$
+	\end{itemize}
+\textbf{Frequency Domain} 
+	\begin{itemize}
+		\item $V_R(j\omega) = V_S(j\omega) = V_{max}\angle0\degree $
+		\item $I_R(j\omega) = \frac{V_{max}}{R}\angle 0\degree$ 
+		\item $\frac{V_R(j\omega)}{I_R(j\omega)} = \frac{V_{max}\angle 0\degree}{\frac{V_{max}}{R}\angle 0\degree} = R\angle 0 \degree \Omega $
+	\end{itemize}
+\section{Power \& Energy}
+	\begin{itemize}
+		\item Power can be absorbed or supplied for both
+		\item All energy dissipated as heat for resistor, stored in magnetic field for inductor (0 if i = 0), electric field for capacitor (0 if v = 0)
+	\end{itemize}
+\section{AC Sources}
+	\begin{itemize}
+		\item $f = \frac{1}{T}$ Hz (frequency) 
+		\item $\omega = 2\pi f = \frac{2\pi}{T} $ rad/s 
+		\item $\phi = 2\pi\frac{\Delta t}{T}$ rad $ = 360\frac{\Delta t}{T}$ deg (phase shift)
+		\item $x(t) = A\cos(\omega t + \phi)$ (A = amplitude)
+		\item $V_{rms} = \sqrt{\frac{1}{T}\int_0^Tx^2(t)dt} = \frac{V_{max}}{\sqrt{2}} $
+	\end{itemize}
+\section{Phasors}
+	\begin{itemize}
+		\item $v(t) = A\cos(\omega_0t + \theta) \rightarrow V(j\omega) = Ae^{j\theta} = A\cos\theta + jA\sin\theta = A \angle\theta $
+	\end{itemize}
+\section{Impedance}
+	\begin{itemize}
+		\item $Z(j\omega) = \frac{V(j\omega)}{I(j\omega)} $
+		\item $V_T = I_NZ$ 
+		\item Combined similar to resistors for total Z 
+		\item Thevenin equivalent combines a single voltage source and impedance in series 
+		\item Norton equivalent consists of a single current source and impedance in parallel 
+		\item For resistors, $Z_R = R = R \angle 0\degree = R \angle 0$
+		\item For inductors, $Z_L = j\omega L = \omega L\angle 90\degree = \omega L \angle \frac{\pi}{2}$
+		\item For capacitors, $Z_C = \frac{1}{j\omega C} = \frac{1}{C\omega}\angle -90\degree = \frac{1}{C\omega}\angle -\frac{\pi}{2}$
+	\end{itemize}
+\section{Misc.}
+	\begin{itemize}
+		\item Complex rect. form - $x = A + jB$ 
+		\item $C = \sqrt{A^2 + B^2}$ 
+		\item $\theta = tan^{-1}(\frac{B}{A})$ 
+		\item $x = Ce^{j\theta} = C \angle \theta $ (polar form) 
+		\item $-180\degree < \theta \leq 180\degree $ or $ -\pi < \theta \leq \pi$ 
+		\item $x = C\cos\theta + jC\sin\theta$ (rectangular form) 
+		\item $V_1 \cdot V_2 = C_1\angle\theta_1 \cdot C_2\angle\theta_2 = C_1C_2\angle(\theta_1+\theta_2)$ 
+		\item $\frac{V_1}{V_2} = \frac{C_1\angle\theta_1}{C_2\angle\theta_2} = \frac{C_1}{C_2}\angle(\theta_1 - \theta_2)$ 
+	\end{itemize}
+\end{multicols*}
+\newpage
+ECE 2070 Equation Sheet \hfill Test 4 \\
+\rule{7.6in}{0.4pt}
+\begin{multicols*}{2}
+\section{Power}
+	\begin{itemize}
+		\item Instantaneous power - $p(t) = \frac{v^2(t)}{R}$
+		\item Average power - $\frac{1}{T} \int_0^T p(t) dt = \frac{1}{2}VI\cos(\theta_V - \theta_I) = V_{rms}I_{rms}\cos(\theta_V - \theta_I)$
+		\item Placeholder %Include a picture of reactive power triangle here
+		\item Above image uses RMS values
+		\item Complex power - $P + Qj$
+		\item P is in watts, Q is in VAR, S is in VA
+		\item $S = \tilde{V}I^*$
+		\item S and Z (impedance) have the same angle
+		\item Impedance angle is the phase shift between voltage and current
+	\end{itemize}
+\section{Voltage}
+	\begin{itemize}
+		\item Mean square voltage - $v^2 = \frac{V^2}{2}$
+		\item RMS voltage - $V_{rms} = \frac{V}{\sqrt{2}}$
+	\end{itemize}
+\section{Transformers}
+	\begin{itemize}
+		\item $N = \frac{n_2}{n_1}$
+		\item $\frac{V_2}{n_2} = \frac{V_1}{n_1}$
+		\item $n_2I_2 = n_1I_1$
+		\item $V_2 = NV_1$
+		\item $I_2 = \frac{I_1}{N}$
+		\item $Z_{ab} = \frac{1}{N^2}Z_L$
+		\item $R_L = N^2R_s$ 
+		\item $X_L = -N^2X_s$
+		\item $P_{av_{max}} = \frac{V_s^2}{4R_s}$
+		\item All above use RMS values
+	\end{itemize}
+\section{Resistors}
+	\begin{itemize}
+		\item Absorb average power ($\frac{VI}{2}$)
+		\item No VAR (Q=0) 
+		\item $\phi = 0$
+		\item $S = I_{rms}^2R = \frac{V_{rms}^2}{R}$
+		\item $v(t) = V\cos(\omega t)$
+		\item $i(t) = I\cos(\omega t)$
+		\item $p(t) = \frac{VI}{2}(1 + \cos(2\omega t))$
+	\end{itemize}
+\section{Inductors}
+	\begin{itemize}
+		\item No average power
+		\item Absorbs VAR ($Q>0$)
+		\item $\phi = +90\degree$
+		\item $S = I_{rms}^2j\omega L = j\frac{V_{rms}^2}{\omega L}$
+		\item $v(t) = V\cos(\omega t)$
+		\item $i(t) = I\cos(\omega t - 90\degree)$
+		\item $p(t) = \frac{VI}{2}(\sin(2\omega t))$
+	\end{itemize}
+\section{Capacitors}
+	\begin{itemize}
+		\item No average power
+		\item Generates VAR ($Q<0$)
+		\item $\phi = -90\degree$
+		\item $S = -\frac{I_{rms}^2}{\omega C}j = -V_{rms}^2\omega Cj$
+		\item $v(t) = V\cos(\omega t)$
+		\item $i(t) = I\cos(\omega t + 90\degree)$
+		\item $p(t) = -\frac{VI}{2}(\sin(2\omega t))$
+	\end{itemize}
+\section{Power Factor}
+	\begin{itemize}
+		\item $pf = \frac{P_{av}}{VI} = \frac{P_{av}}{|S|} = \cos\theta$
+		\item $pf = 0 \implies$ Purely inductive/capacitive, no avg. dissipated power 
+		\item $pf = 1 \implies$ Purely resistive load, all power is dissipated power
+		\item $0 < pf < 1 \implies$ combination of resistive and reactive
+		\item $\theta < 0 \implies$ leading and capacitive 
+		\item $\theta > 0 \implies$ lagging and inductive
+		\item $Q_A = -Q_B$
+		\item $C = \frac{-Q_B}{\omega\widetilde{V_L}^2}$
+		\item For power factor corrections, load type must be opposite of the part you can observe 
+		\item $\theta < 0 \implies$ needs inductor and $\theta > 0 \implies$ needs capacitor
+		\item $X_B = -\frac{R^2 + X_A^2}{X_A}$
+		\item If $X_A = \omega L \implies X_B = -\frac{1}{\omega C}$
+		\item If $X_A = \frac{-1}{\omega C} \implies X_B = \omega L$
+	\end{itemize}
+\section{Wye}
+	\begin{itemize}
+		\item $V_1 = \tilde{V}\angle 0\degree, V_2 = \tilde{V}\angle -120\degree, V_3 = \tilde{V}\angle -240\degree$
+		\item Voltages are at the same frequency and have the same magnitude (sum of all three equals 0)
+		\item Capital letters are for load nodes
+		\item $\widetilde{V}_{Line} = \widetilde{V}_{Phase}*\sqrt{3}\angle 30\degree$
+		\item $V_p = \frac{V_{line}}{\sqrt{3}}$ 
+		\item $P = 3V_pI_p\cos\theta = \sqrt{3}V_{line}I_{line}\cos\theta$
+	\end{itemize}
+\section{Delta}
+	\begin{itemize}
+		\item $I_1 = \tilde{I}\angle 0\degree, I_2 = \tilde{I}\angle -120\degree, I_3= \tilde{I}\angle -240\degree$ 
+		\item $\widetilde{I}_{Line} = \widetilde{I}_{Phase}*\sqrt{3}\angle -30\degree$
+		\item $I_{phase} = \frac{I_{line}}{\sqrt{3}}$
+		\item $P = 3V_pI_p\cos\theta = \sqrt{3}V_{line}I_{line}\cos\theta$
+	\end{itemize}
+\section{Misc.}
+	\begin{itemize}
+		\item $I^*$ indicates complex conjugate
+		\item $S = \frac{V^2}{Z^*}$
+		\item $R_{eq} \frac{1}{N^2}R_L$
+		\item If power is greater than 0 the load is absorbing power
+		\item A negative value needs an inductors while a positive value needs a capacitor
+		\item Power factor correction reduces current
+		\item Imaginary power describes storage and return of energy in inductors and capacitors
+		\item If secondary is $\frac{1}{4}$ primary voltage, the secondary current is $4\times$ primary current
+		\item pf = 1 for real power = apparent power
+		\item LVDT measures position by changing magnetic coupling between primary and secondary coils
+	\end{itemize}
+\end{multicols*}
+\newpage
+ECE 2070 Equation Sheet \hfill Test 5 \\
+\rule{7.6in}{0.4pt}
+\begin{multicols*}{2}
+	\section{Frequency Response}
+	\begin{itemize}
+		\item Gain = amplitude of output divided by amplitude of input
+		\item Inductor impedance increases with frequency
+		\item Capacitor impedance decreases with frequency
+		\item Resistor impedance stays the same
+		\item Filters shape the frequency response to perform specific operations
+		\item Four types - low pass (lets low through), band pass (lets middle through), high pass (lets high through), notch (blocks middle)
+		\item Cutoff frequency is the frequency where power is reduced to half its max value and gain is 0.707 of max
+		\item Gain $= \frac{|V_c|}{|V|} = \frac{\omega_0L}{R} = \frac{1}{\omega_0CR}$
+		\item Convert to dB - $20log_{10}\frac{V_{out}}{V_{in}}$
+		\item Resonant frequency - $\omega_0 = \frac{1}{\sqrt{LC}}$
+	\end{itemize}
+	\section{Op Amps}
+	\begin{itemize}
+		\item Negative sign is inverting input, positive sign is non-inverting input, other side is output
+		\item Inverting amplifier - $v_{out} = -\frac{R_F}{R_S}v_s$
+		\item Non-inverting amplifier - $v_{out} = \left(1 + \frac{R_F}{R_S}\right)v_s$
+		\item Buffer - $v_{out} = v_s$
+		\item Differential - $v_{out} = \frac{R_2}{R_1}(v_2 - v_1)$
+		\item Summing amplifier - $v_{out} = \sum\limits_{k=1}^n -\frac{R_F}{R_{Si}}v_{Sk}$
+	\end{itemize}
+	\section{Diodes \& Semiconductors}
+	\begin{itemize}
+		\item p-type semiconductor is doped so that the majority of the current is due to holes
+		\item n-type semiconductor is doped so that majority of the current is due to electrons
+		\item Zenor diode is breakdown, photo diode is reverse bias, LED is forward bias
+		\item For p-type, hole moves in same direction of current
+		\item Ideal diode dissipates no power
+	\end{itemize}
+	\section{Digital/Binary Systems}
+	\begin{itemize}
+		\item Analog signal can take any value in a range while digital signal can only take a finite number of values in a range
+		\item To convert to binary, divide by two, add a 1 if there's a remainder and a 0 if clean division
+		\item In logic tables, 0 is false and 1 is true
+	\end{itemize}
+		\section{Logic Gates and Digital Computation}
+	\begin{itemize}
+		\item Types of gates- AND, OR, NOT, NAND, NOR, XOR
+		\item $A + \overline{A} = 1$
+		\item $A \cdot \overline{A} = 0$
+		\item $A \cdot A = A + A = A$
+		\item $A + 1 = 1$
+		\item $\overline{A + B} = \overline{A}\cdot\overline{B}$
+		\item $\overline{A\cdot B} = \overline{A} + \overline{B}$
+	\end{itemize}
+	\newpage
+	\section{Blank Space}
+\end{multicols*}
+\end{document}

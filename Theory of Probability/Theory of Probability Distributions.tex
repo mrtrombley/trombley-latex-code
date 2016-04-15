@@ -1,0 +1,80 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{amssymb}
+\pagestyle{empty}
+\setlength{\topmargin}{-1.2in}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{-.6in}
+\setlength{\textwidth}{7in}
+\begin{document}
+Theory of Probability Distributions \\
+\rule{7.6in}{0.4pt}\\
+\begin{multicols*}{2}
+\section{Distributions} \\
+\textbf{BERNOULLI DISTRIBUTION} \\
+\indent $P(X = 1) = p, P(X = 0) = 1-p \\
+\indent $pmf- $ p^x(1-p)^{1-x} \\
+\indent \mu = p \\
+\indent \sigma^2 = p(1-p) \\
+\textbf{BINOMIAL DISTRIBUTION} \\
+\indent $X \sim Bin(n,p)$ \\
+\indent \mu = np$ \\
+\indent \sigma^2 = np(1-p) \\
+\indent P(k) = P(X = k) = {n \choose k} p^k(1-p)^{n-k} \\
+\textbf{POISSON DISTRIBUTION} \\
+\indent $X \sim P(\lambda) \rightarrow p(k) = e^{-\lambda}\frac{\lambda^k}{k!} \\
+\indent \mu = \lambda \\
+\indent \sigma^2 = \lambda \\
+\indent $P$(np) \approx $ Bin$(n,p) \\
+\textbf{GEOMETRIC DISTRIBUTION} \\
+\indent $X \sim $ Geometric$(p) \rightarow p(k) = (1-p)^{k-1}p \\
+\indent \mu = \frac{1}{p} \\
+\indent \sigma^2 = \frac{1-p}{p^2} \\
+\indent $\cdot$Geometric distribution is memoryless \\
+\textbf{NEGATIVE BINOMIAL DISTIBUTION} \\
+\indent $X \sim $ NB$(r,p) \rightarrow  p(k) = {k-1 \choose r-1}(1-p)^{k-r}p^r \\
+\indent X \sim $ Geometric$(p) = X \sim $ NB$(1,p) \\
+\indent \mu = \frac{r}{p} \\
+\indent \sigma^2 = \frac{r(1-p)}{p^2} 
+\section{Continuous Random Variables} \\
+F(X) = CDF, f(x) = pdf \\
+For a pdf to be valid, \\
+\indent $\int_{-\infty}^{\infty} f(x)dx = 1 \\
+\indent F(a) = P(X \leq a) = \int_{-\infty}^a f(x)dx \\
+\indent P(a \leq X \leq b) = F(b) - F(a) = P(a < X < b) \\
+\indent f(x) = \frac{d}{dx} F(x) \\
+$Expected value$\\
+\indent E[g(x)] = \sum g(x)f(x) = \int_{-\infty}^{\infty} g(x)f(x)dx \\
+E[X + Y] = E[X] + E[Y] \\
+E[aX + b] = aE[x] + b \\
+Var(aX + b) = a^2Var(x) \\
+$For even function, E[x] = 0 \\ \\
+\textbf{UNIFORM DISTRIBUTION} \\
+$f(x) = c \hspace{5mm} \alpha \leq x \leq \beta \\
+f(x) = 0 \hspace{5mm} $ otherwise$ \\
+c = \frac{1}{\beta - \alpha} \\
+$CDF$ \\
+\indent 0 \indent \indent x \leq \alpha \\
+\indent \frac{x-\alpha}{\beta-\alpha}\indent \alpha < x < \beta \\
+\indent 1 \indent \indent x \geq \beta \\
+\mu = \frac{\alpha + \beta}{2} \\
+\sigma^2 = \frac{(\beta - \alpha)^2}{12} \\\\
+\textbf{NORMAL APPROX. TO BINOMIAL} \\
+$P(X = i) \approx P(i - 0.5 < Y < i + 0.5) \\\\
+\textbf{EXPONENTIAL DISTRIBUTION} \\
+X \sim $ Exp$(\lambda) \rightarrow f(x) = \lambda e^{-\lambda x} \indent x \geq 0 \\
+F(X) = 1 - e^{-\lambda x} \\
+\mu = \frac{1}{\lambda} \\
+\sigma^2 = \frac{1}{\lambda^2} \\
+$Distribution is memoryless$ \\
+E($max$(\lambda)) = \frac{3}{2\lambda}\\
+$Min-  Exp$(\lambda_1 + \lambda_2) \\\\
+\textbf{GAMMA DISTRIBUTION} \\
+X \sim G(\alpha, \lambda) \rightarrow \frac{\lambda^{\alpha}}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}	\indent x \geq 0\\
+$Exp$(\lambda) = G(1,\lambda) \\
+\mu = \frac{\alpha}{\lambda} \\
+\sigma^2 = \frac{\alpha}{\lambda^2} \\
+\end{multicols*}
+\end{document}

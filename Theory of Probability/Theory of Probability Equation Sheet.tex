@@ -1,0 +1,183 @@
+\documentclass [8pt] {article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{amssymb}
+\pagestyle{empty}
+\setlength{\topmargin}{-1.2in}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{-.6in}
+\setlength{\textwidth}{7in}
+\begin{document}
+Theory of Probability Equation Sheet \\
+\rule{7.6in}{0.4pt}\\
+\begin{multicols*}{2}
+\hspace{-7mm} \textbf{GENERALIZED RULE OF COUNTING} \\
+$\indent n_1 \times n_2 \times \dots \times n_r = \prod\limits_{i=1}^r n_i$ \\
+\textbf{PERMUTATIONS} \\
+\indent $n \times (n-1) \times \dots \times 2 \times 1 = n!$ \vspace{2mm} \\
+If $n$ objects are alike, \\
+\indent $\frac{n!}{n!n_2!\dots n_r!}$ \vspace{3mm} \\
+\textbf{NUMBER OF PERMUTATIONS} \\
+\indent $n \times (n-1) \times \dots \times (n - r + 1) = \frac{n!}{(n-r)!}$ \vspace{2mm} \\
+\textbf{COMBINATIONS} \\
+If we have $n$ items and want to select $r$ of them, \\
+\indent ${n \choose r} = \frac{n!}{(n-r)!r!}$ \\
+\indent ${n \choose 0} = 1 $\\
+\indent ${n \choose 1} = n $\\
+\indent ${n \choose r} = {n \choose n-r} $\\
+\indent ${n \choose r} = {n-1 \choose r} + {n-1 \choose r-1} $ \vspace{2mm}\\
+\textbf{BINOMIAL THEOREM} \\
+\indent $(a+b)^n = \sum\limits_{k=0}^n {n \choose k}a^kb^{n-k}$ \vspace{1mm} \\
+Any event $E$ is a subset of the sample space $S$. \\
+\indent $E \subset S$ \\
+\indent \textbf{Intersection}- $A \cap B$ (both occur) \\
+\indent \textbf{Union}- $A \cup B$ (at least one occurs) \\
+\indent \textbf{Complement}- $A^c$ (A does not occur) \\
+Two events $A$ and $B$ are mutually exclusive/disjoint if they have no outcomes in common, i.e. $A \cap B = \varnothing $ \\
+Rules for these: \\
+\indent $A \cup B = B \cup A, A \cap B = B \cap A$ \\
+\indent $(A \cup B) \cup C = A \cup (B \cup C)$ \\
+\indent $(A \cap B) \cap C = A \cap (B \cap C)$ \\
+\indent $(A \cup B) \cap C = (A \cap C)\cup(B \cap C)$ \\
+\indent $(A \cap B)\cup C = (A \cup C)\cap(B \cup C)$ \vspace{2mm} \\
+\textbf{DEMORGAN's LAWS} \vspace{2mm} \\
+\indent $(A \cup B)^c = A^c \cap B^c, (A \cap B)^c = A^c \cup B^c$ \\
+\indent $\left(\bigcup\limits_{i=1}^n A_i\right)^c = \bigcup\limits_{i=1}^n A_i^c$ \vspace{2mm} \\
+\textbf{AXIOMS OF PROBABILITY} \\
+\indent Let $P$ be a function that assigns a nonnegative real number to each event $E$ of a sample space $S$. We call $P$ a probability if: \\
+\indent \textbf{Axiom 1: non-negative} \\
+\indent \indent $0 \leq P(E) \leq 1$ \\
+\indent \textbf{Axiom 2: total one} \\
+\indent \indent $P(S) = 1$ \\
+\indent \textbf{Axiom 3: countable addition} \vspace{1mm}\\
+\indent \indent $P\left(\bigcup\limits_{i=1}^\infty E_i\right) = \sum\limits_{i=1}^\infty P(E_i) $ if $ E_i \cap E_j = \varnothing $ for $ i \neq j$ \vspace{1mm}\\
+\indent \indent For $k$ disjoint events $E_1 \dots E_k$, \\
+\indent \indent \indent $P\left(\bigcup\limits_{i=1}^k E_i\right) = \sum\limits_{i=1}^k P(E_i)$ \\
+\textbf{COMPLEMENT RULE} \\
+\indent $P(A^c) = 1 - P(A)$ \vspace{1mm} \\
+\textbf{DIFFERENCE RULE} \\
+\indent $P(B \cap A^c) = P(B) - P(A)$, if $A \subseteq B$ \vspace{1mm} \\
+\textbf{INCLUSION-EXCLUSION} \\
+\indent $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ \vspace{1mm} \\
+\textbf{SAMPLE SPACES WITH EQUALLY LIKELY OUTCOMES} \\
+\indent For event $E$ in a sample space $S$ with equally likely outcomes, \\
+\indent $P(E) = \frac{\#(E)}{\#(S)} $ \vspace{1mm} \\
+\textbf{CONDITIONAL PROBABILITY} \\
+\indent Given two events $A$ and $B$ with $P(B) > 0$, the conditional probability of $A$ given $B$ has occurred is: \\
+\indent \indent $P(A | B) = \frac{P(A \cap B)}{P(B)}$ \\
+\indent \indent $P(A | A) = 1 \\
+\indent \indent P(A^c | A) = 0 \\
+\indent \indent P(A^c | B) = 1 - P(A|B)$ \vspace{1mm}\\
+\textbf{MULTIPLICATION RULE} \\
+\indent $P(A \cap B) = P(A | B)P(B)$ \\
+\indent $P\left(\bigcap\limits_{i=1}^n A_i\right) = P(A_1)P(A_2|A_1)P(A_3|A_1,A_2)\dots P(A_n|A_1,\dots A_{n-1})$ \\
+\textbf{LAW OF TOTAL PROBABILITY} \\
+\indent For events $A_1,\dots ,A_n$ are disjoint, and $\bigcup\limits_{i=1}^n A_i = S$, then for any event $B$, \\
+\indent $P(B) = P(B|A_1)P(A_1) + \dots + P(B|A_n)P(A_n)$ \\
+\textbf{BAYES THEOREM} \\
+\indent Suppose events $A_1, \dots, A_n$ are disjoint, and $\bigcup\limits_{i=1}^n A_i = S$, with $P(A_i) > 0, i = 1, 2, \dots, n$. Then for any event $B$ with $P(B) > 0$, \\
+\indent $P(A_i|B) = \frac{P(B|A_i)P(A_i)}{\sum\limits_{j=1}^n P(B|A_j)P(A_j)}, i = 1, \dots, n$ \\
+\indent \indent \indent \hspace{3mm} $= \frac{P(B|A_i)P(A_i)}{P(B|A_1)P(A_1) + \dots + P(B|A_n)P(A_n)}$ \vspace{2mm}\\
+$P(A_i)$ is the prior probability. $P(A_i|B)$ is called posterior probability. \\
+\textbf{INDEPENDENCE} \\
+\indent Events $A$ and $B$ are independent if: \\
+\indent \indent $P(A \cap B) = P(A) \times P(B)$ \\
+\indent If $A$ and $B$ are independent, then: \\
+\indent \indent $P(A|B) = \frac{P(A)P(B)}{P(B)} = P(A)$ \\
+\indent If $A$ and $B$ are independent, then $B$ and $A$ are independent. $A$ and $B^c$ are also independent, as are $A^c$ and $B^c$. Independent $\neq$ disjoint. \\
+\textbf{MUTUAL INDEPENDENCE} \\
+\indent Three events $A, B, C$ are mutually independent if:\\
+\indent \indent $P(A\cap B) = P(A)P(B) \\
+\indent \indent P(B \cap C) = P(B)P(C) \\
+\indent \indent P(A \cap C) = P(A)P(C) \\
+\indent \indent P(A \cap B \cap C) = P(A)P(B)P(C)$ \\
+\indent If the first three hold true but not the last, then $A, B, C$ are pairwise independent.\\
+\textbf{RANDOM VARIABLES} \\
+A random variable $X$ is a real-valued function on the sample space $S$. \\
+\textbf{CUMULATIVE DISTRIBUTION FUNCTION} \\
+\indent $F(x) = P(X \leq x), -\infty < x < \infty$ \\
+\indent \indent $X$- random variable \\
+\indent \indent $x$- real valued number \\
+\indent $F(n) = P(X \leq n) = 1 - (1-p)^n \\
+\indent P(a < X \leq b) = F(b) - F(a) \\
+\indent P(X < b) \neq P(X \leq b)$ \\
+\textbf{DISCRETE RANDOM VARIABLES} \\
+\indent A random variable $X$ that can take on at most a countable number of possible values is a discrete random variable. \\
+\indent $p(x) = P(X = x)$ \\
+\indent For a discrete random variable $X$, there exists a countable sequence $x_1, x_2, \dots$, so that \\
+\indent \indent P(x_i > 0) $ for $ i = 1, 2, /dots \\
+\indent \indent p(x) = 0 $ for all other values of $ x \\
+\indent \indent \sum\limits_{i=1}^\infty p(x_i) = 1 \\
+\indent \indent F(a) = \sum\limits_{all x \leq a} p(x) $ \\
+\textbf{EXPECTED VALUE} \\
+\indent $E[x] = \sum\limits_{x: p(x) > 0} x \cdot P(X=x) = \sum\limits_{x: p(x)>0} xp(x) \\
+\indent E[aX + b] = aE[x] + b \\
+\indent E[aX] = aE[x] \\
+\indent E[b] = b$ \\
+\textbf{VARIANCE} \\
+\indent $\sigma^2 = $Var$[x] = E[(x-E(x))^2] = E[(X-\mu)^2] = E(x^2) - \mu^2 = E(x^2) - (E(x))^2 \\
+\indent \sigma = $SD$[x] = \sqrt{$Var$[x]} \\
+\indent $Var$[x] \geq 0 \\
+\indent $Var$[aX + b] = a^2$Var$[x] \\
+\indent $Var$[X] + b = $Var$[x] \\
+\indent $Var$[b] = 0 \\
+\indent $Var$[X + Y] = $Var$[X] + $Var$[Y]$ \\
+\textbf{DIFFERENCE RULE} \\
+\indent $P(B \cap A^c) = P(B) - P(A)$ \vspace{1mm} \\
+\textbf{MISC. INFO / EXTRAS} \\
+-$X$ people shaking hands- ${x \choose 2}$ \\
+-Solving for $P(A)$ when disjoint vs. independent: \\
+\indent Disjoint- $P(A) + P(B) = P(A \cup B)$ \\
+\indent Independent- $P(A \cap B) = P(A)\cdot P(B) = P(A) + P(B) - P(A \cup B)$ \\
+-$E(Y^2) = $Var$(Y) + [E(Y)]^2$ \\
+-PMF (example of Bernoulli):\\
+\indent  $p_x(1) = p, p_x(0) = 1-p \\
+\indent  p_y(Y(1)) = p, p_y(Y(0)) = 1-p $\\
+-CDF (example of Bernoulli): \\
+$F_y(Y)=$
+\[ 
+\left \{
+  \begin{tabular}{ccc}
+  0 & if & y is less than Y(0) \\
+  y(smaller val) & if & Y(0) \leq y < Y(1) \\
+  1 & if & y \geq Y(1) 
+  \end{tabular}
+\] \\
+-Number of different circles formed by $N$ people is $(n-1)!$ \\
+-Disjoint = mutually exclusive \\
+-$P(A \cap B^c) = P(A) - P(A \cap B) \\
+-$For every two sets A and B, $A \cap B$ and $A \cap B^c$ are disjoint and $A = (A \cap B) \cup (A \cap B^c)$.  In addition, B and $A \cap B^c$ are disjoint and $A \cup B = B \cup (A \cap B^c)$. \\
+-Birthday shared probability- $\frac{365!}{(365-k)!365^k} $ \\
+-Other multiplication rule value- $P(A \cap B) = P(A)P(B|A)$ \\ \\
+\textbf{Joint Distributions and Expectations} \\
+Joint CDF \\
+\indent $F_{X,Y}(x,y) = P[X \leq x, Y \leq y] \\
+\indent F_X(x) = F_{X,Y}(x, \infty) \\
+\indent F_Y(y) = F_{X,Y}(\infty, y) \\
+\indent P(X > x, Y > y) = 1 - F_X(x) - F_Y(y) + F_{X,Y}(x,y) \\
+P(X=x) = \sum\limits_y P(X=x, Y=y) = \sum\limits_y P(X=x|Y=y)P(Y=y) \\
+\int_{-\infty}^{\infty}\int_{-\infty}^{\infty} f(x,y)dxdy = 1 \\
+f(x,y) = \frac{\partial^2}{\partial x \partial y} F(x,y) $\\
+Marginal PDF \\
+\indent $f_X(x) = \int_{-\infty}^{\infty}f(x,y)dy \\
+\indent f_Y(y) = \int_{-\infty}^{\infty}f(x,y)dx $\\
+Independent Random Variables \\
+$\indent P(X \epsilon A, Y \epsilon B) = P(X \epsilon A)P(Y \epsilon B) \\
+\indent F_{X,Y}(x,y) = F_X(x)F_Y(y) \\
+\indent p_{X,Y}(x,y) = p_X(x)p_Y(y) \\
+\indent f_{X,Y}(x,y) = f_X(x)f_Y(y) $\\
+Sums of Continuous Random Variables \\
+$\indent f_{X+Y}(z) = \int_{-\infty}^{\infty} f(x,z-x)dx = \int_{-\infty}^{\infty} f(z-y,y)dy \\
+\indent f_{X+Y}(z) = \int_{-\infty}^{\infty} f_X(x)f_Y(z-x)dx = \int_{-\infty}^{\infty}f_X(z-y)f_Y(y)dy$ (if independent) \\ 
+\indent $F_{X+Y}$ is called the convolution of $F_x$ and $F_Y$ \\ 
+Expected Value
+$\indent E[g(X,Y)] = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}g(x,y)f(x,y)dxdy \\
+\indent E(X+Y) = E(X) + E(Y) \\
+\indent E(X-Y) = E(X) - E(Y) \\
+\indent E(XY) = E(X)\cdot E(Y)$ \\
+Covariance
+
+Need sums of independent random variables and all distribution from chart
+\end{multicols*}
+\end{document}

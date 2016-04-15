@@ -1,0 +1,288 @@
+\documentclass [10pt] {article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{MnSymbol}
+\usepackage{multicol}
+\usepackage{enumitem}
+\pagestyle{empty}
+\setlength{\topmargin}{-1.2in}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{-.6in}
+\setlength{\textwidth}{7in}
+\setlist{nolistsep}
+\begin{document}
+Statics \& Dynamics Equation Sheet\\
+\rule{7.6in}{0.4pt}
+\begin{multicols*}{2}
+\section{Kinetics \& Kinematics}
+		\begin{itemize}
+			\item $\rightarrow \sum F_x = ma_{g_x}$
+			\item $\rightarrow \sum F_y = ma_{g_y}$
+			\item $\circlearrowleft \sum M_A = I_A\alpha$\\
+		\end{itemize}
+	\textbf{General 2D Plane Motion (No Slip)}
+		\begin{itemize}
+			\item $\overline{v}_B = \overline{v}_A + \overline{\omega} \times \overline{r}_{B/A} $
+			\item $\overline{a}_B = \overline{a}_A + \overline{\alpha} \times \overline{r}_{B/A} + \overline{\omega} \times (\overline{\omega} \times \overline{r}_{B/A})$
+			\item $\indent \indent \overline{\omega} \times (\overline{\omega} \times \overline{r}_{B/A}) = -\omega^2\overline{r}_{B/A}$
+			\item $v_G = \omega \times r$
+			\item $a = \omega^2 r$ 
+			\item $a = \alpha \times r$
+			\item $s = r\theta$
+			\item $\overline{v}_{B} = \overline{v}_A + \overline{v}_{B/A}$
+			\item $\overline{a}_{B} = \overline{a}_A + \overline{a}_{B/A}$
+			\item $\overline{v} = \overline{\omega} \times \overline{r}_p$
+			\item $\alpha_Ar_A = \alpha_Br_B$
+			\item $L_{rope} = S_A + S_B + $constants
+			\item $\dot{L} = V_A + V_B = 0, \ddot{L} = a_A + a_B = 0$ 
+			\item Raising winch-$ \dot{L} = -\omega r$ \\
+		\end{itemize}
+\textbf{Rotating Coordinate Systems}
+		\begin{itemize}
+			\item $\hat{i} = \cos\theta\hat{I} + \sin\theta\hat{J}$
+			\item $\hat{j} = -\sin\theta\hat{I} + \cos\theta\hat{J}$
+			\item $(\overline{v}_B) = (\overline{v}_A)_{XYZ} + (\overline{v}_{B/A})_{xyz} + \overline{\Omega}_{AB} \times (\overline{r}_{B/A})_{xyz}$
+			\item $(\overline{a}_B)_{XYZ} = (\overline{a}_A)_{XYZ} + (\overline{a}_{B/A})_{xyz} + \dot{\overline\Omega}_{AB} \times (\overline{r}_{B/A})_{xyz} - \Omega^2_{AB}(\overline{r}_{B/A})_{xyz} + 2\overline{\Omega}_{AB} \times (\overline{v}_{B/A})_{xyz}$
+			\item Only useful for cases of constant acceleration. \\
+		\end{itemize}
+\textbf{Horizontal}\\
+	$\begin{array}{rcl}
+		v & = & v_0 + at \\
+		\Delta{x} & = & v_{0}t + \frac{1}{2}at^2 \\
+		v^2 & = & v_{0}^2 + 2a\Delta{x}
+	\end{array} \\\\
+\textbf{Vertical} \\
+	\begin{array}{rcl}
+		v & = & v_{0_y} - gt \\
+		\Delta{y} & = & v_{0_y} t - \frac{1}{2}gt^2 \\
+		v_y^2 & = & v_{0_y}^2 - 2g\Delta{y}
+	\end{array} \\\\
+\textbf{Rotational} \\
+	\begin{array}{rcl}
+		\omega & = & \omega_0 + \alpha t \\
+		\Delta{\theta} & = & \omega_{0_t} t + \frac{1}{2}\alpha t^2 \\
+		\omega^2 & = & \omega_0^2 + 2\alpha \Delta{\theta}
+	\end{array}$
+\section{S-V-A-T Equations}
+	\begin{itemize}
+		\item Dot notation ($\dot{s}$) indicates time derivative 
+		\item \textbf{Given function of time}
+		\item $\begin{array}{rcl}
+			s = s(t) & \rightarrow & v = \frac{ds}{dt} \\
+			v = v(t) & \rightarrow & a = \frac{dv}{dt} \\
+ 			& & s = s_0 + \int_{t_0}^t{v(t)}dt \\
+			a = a(t) & \rightarrow & v = v_0 + \int_{t_0}^t{a(t)}dt \\\\\\
+			\end{array}$
+		\item \textbf{Given function of position}
+		\item $\begin{array}{rcl}
+			t = t(s) & \rightarrow & v(s) = 1/(\frac{dt}{ds}) \\
+			v = v(s) & \rightarrow & a(s) = v(s)\frac{dv}{ds} \\
+ 			& & t(s) = t_0 + \int_{s_0}^s{\frac{ds}{v(s)}}ds \\
+			a = a(s) & \rightarrow & v(s) = \pm \sqrt{v_0^2 + 2\int_{s_0}^s{a(s)}ds} \\
+			\end{array}$
+		\item \textbf{Given function of speed}
+		\item $\begin{array}{rcl}
+			t = t(v) & \rightarrow & a(v) = 1/(\frac{dt}{dv}) \\
+			a = a(v) & \rightarrow & s(v) = s_0 + \int_{v_0}^v{\frac{v}{a(v)}}dv \\
+			 & & t(v) = t_0 + \int_{v_0}^v{\frac{dv}{a(v)}} \\
+			s = s(v) & \rightarrow & a(v) = v/(\frac{ds}{dv}) \\
+			\end{array}$
+		\item $\alpha d\theta = \omega d\omega $
+	\end{itemize}
+\section{Friction}
+	\begin{itemize}
+		\item $F_s \leq F_{f(max)} = \mu_s F_n \hspace{5mm} F_k = \mu_k F_n $
+		\item $F_{static} = -F_{applied}$
+		\item Friction forces are not conservative 
+		\item Neglect rolling resistance does not mean neglect friction 
+		\item Assumption of no slip requires $F_f \leq \mu_sF_N $
+		\item If $F_f > \mu_sF_N$, slipping occurs
+	\end{itemize}
+\section{Moments \& Moment of Inertia}
+	\begin{itemize}
+		\item Counterclockwise is generally positive 
+		\item Couple is two equal moments acting in opposite directions that causes rotation
+		\item $\overline{M} = \overline{r} \times \overline{F} = rF\sin{\theta} $
+		\item $M = |F|d $
+		\item $\hat{\lambda} \cdot \overline{M_o} = M_o\cos\theta $ 
+		\item Moment about an axis- $ M_a = u_a \cdot (r \times F)$
+		\item $u_A = $ unit vector along the axis 
+		\item Resulting crossproduct is $|u_x u_y u_z|$ in first row, $|u_a r_x F_x|$ in first row 
+		\item $\sum M_{O_{Bar}} = \frac{1}{3}ml^2\alpha_{Bar} $
+		\item $\sum M_{G_{Bar}} = \frac{1}{12}ml^2\alpha_{Bar} $
+		\item $\sum M_{G_{Disk}} = \frac{1}{2}mr^2\alpha_{Disk} $
+		\item $\sum \overline{M}_p = I_G\overline{\alpha} + \overline{r}_{G/P}\times m\overline{a}_G $
+		\item $\sum \overline{M}_O = I_O \overline{\alpha} $\
+		\item $I_G = k_G^2m $
+		\item $I_{Ball} = \frac{2}{5}mr^2  $
+		\item $I_{Bar} = \frac{1}{12}ml^2 $
+		\item $I_{Bar \hspace{1mm} end}= \frac{1}{3}ml^2 $
+		\item $\sum \overline{M}_p = I_G\overline{\alpha} + \overline{r}_{G/P} \times m\overline{a}_G$ 
+		\item $I_O = I_G + ($mass$)($dist O$\rightarrow$CG$)^2$
+		\item $m = \frac{w}{g} = \rho V = \rho \int V = \rho \int ytdx$
+		\item $dm = \rho tydx$
+		\item $I_y  = \int x^2_{el} dA $
+		\item $I_{y_G} = I_y - Ax_G^2 $
+		\item $I_x = \int\frac{1}{12}y^3dx + \int y^2_{el}dA $
+		\item $CG_{semicircle}=\frac{4r}{3\pi} $
+		\item $I_{G_{rect}} = \frac{m}{12}(a^2 + b^2) $
+		\item $I_{x_{rect}} = \frac{1}{12}bh^3 + A(dist O\rightarrow CG)^2 $
+		\item $I_{x_{sphere}} = \frac{1}{4}\pi r^4 + A(dist O\rightarrow CG)^2 $
+		\item $I_{x_{rect}} = m[\frac{1}{12}(z^2 + y^2) + (CG_z^2 + CG_y^2)] $
+		\item $I_{x_{cyl}} = m[(\frac{1}{4}r^2 + \frac{1}{12}h^2) + (CG_z^2 + CG_y^2)] $
+		\item $I_x = I_{x_G} + m(y_G^2 + z_G^2) $
+	\end{itemize}
+\section{Work, Energy \& Power}
+	\begin{itemize}
+		\item T- Kinetic Energy, V- Potential Energy, U- Work
+		\item U = all work done by external forces
+		\item $T_1 + U_{1 \rightarrow 2} = T_2 = \int_1^2 \sum \overline{F}\cdot d\overline{r}$
+		\item $T = \frac{1}{2}mv^2 + \frac{1}{2}I_G\omega^2 $
+		\item $T = \frac{1}{2}I_O\omega^2 $(for translation \& rotation about fixed point)
+		\item $V_1 + T_1 = V_2 + T_2 $
+		\item $V_{Spring} = \frac{k_s}{2}s^2 = \frac{k_{\theta}}{2}\theta^2 $
+		\item $U_{1 \rightarrow 2} = Fd = M_G\theta $
+		\item $\int_1^2 \sum\overline{M}_G\cdot d\overline{\theta} = \int_1^2 I_G \overline{\alpha} \cdot d\overline{\theta} $
+		\item $U_{On \hspace{1mm} spring} = \frac{k_s}{2}(s_2^2 - s_1^2) $
+		\item $U_{By \hspace{1mm} spring} = -\frac{k_s}{2}(s_2^2 - s_1^2) $
+		\item $U_{By \hspace{1mm} torsional \hspace{1mm} spring} = -\frac{k_{\theta}}{2}(\Delta\theta_2^2 - \Delta\theta_1^2) $
+		\item $\sum\limits_{i=1}^n (U_{1 \rightarrow 2})_i = \sum\limits_{i=1}^n (T_2)_i - \sum\limits_{i=1}^n (T_1)_i  $
+		\item $P = Fv = M\omega = Fv\cos{\theta} $
+		\item $P = \overline{F}\cdot\overline{v} + \frac{d\overline{F}}{dt}\cdot d\overline{r} = \overline{M}\cdot\overline{\omega} + \frac{d\overline{M}}{dt}\cdot d\overline{\theta} \\ = \frac{U_{1 \rightarrow 2}}{t_2 - t_1} $
+		\item $\epsilon = \frac{P_{out}}{P_{in}} $
+	\end{itemize}
+\section{Impulse \& Momentum}
+	\begin{itemize}
+		\item $\frac{\Delta V}{\Delta T} $during collision 
+		\item Impulsive- magnitude is a function of the time length of the impulse (i.e. reaction forces, connections)
+		\item Non-impulsive- magnitude does not change as the time length of the impulse changes (i.e. weight, soft spring, constants) 
+		\item Linear (can be applied in all three directions)
+		\item $m(\overline{v}_G)_1 + \int_{t_1}^{t_2} \sum \overline{F}dt = m(\overline{v}_G)_2 $
+		\item \textbf{Angular}
+		\item $I_G\overline{\omega}_1 + \int_{t_1}^{t_2} \sum \overline{M}_G dt = I_G\overline{\omega}_2$ 
+		\item \textbf{Translation with a fixed point }
+		\item $(\overline{H}_p)_1 + \int_{t_1}^{t_2} \sum \overline{M}_p dt = (\overline{H}_p)_2 $
+		\item $(\overline{H}_p)_1 = I_G\overline{\omega}_1 + r_{{G/p}_1}\times m\overline{v}_{G_1} $
+		\item $(\overline{H}_p)_2 = I_G\overline{\omega}_2 + r_{{G/p}_2}\times m\overline{v}_{G_2} $
+		\item \textbf{Special Case}
+		\item  $H_O = [I_G + m(r_{G/O})^2]\overline{\omega} = I_O\overline{\omega} $ (fixed axis) 
+		\item $F_{avg}\Delta t = \int_{t_1}^{t_2} Fdt$\\\\
+	\end{itemize}
+\section{Coordinates}
+\textbf{N-T Coordinates (normal-tangential)}
+	\begin{itemize}
+		\item $\overline{v} = v\textbf{$\hat{u}_t$} = \dot{s}\textbf{$\hat{u}_t$}$
+		\item $\overline{a} = a_t\textbf{$\hat{u}_t$} + a_n\textbf{$\hat{u}_n$} = \dot{v}\textbf{$\hat{u}_t$} + v\dot{\theta}\textbf{$\hat{u}_n$} \hspace{5mm} (\dot{\theta} = \frac{v^2}{\rho})$
+		\item $a_t = \frac{dv}{dt} = \dot{v} = \ddot{s} = \alpha r$
+		\item $a_n = \frac{v^2}{\rho} = \omega^2r $
+		\item $\rho = \frac{[1+(dy/dx)^2]^{3/2}}{d^2y/dx^2}$ (radius  of  curvature)\\
+	\end{itemize}
+\textbf{Polar Coordinates} 
+	\begin{itemize}
+		\item $\overline{r} = r\hat{u_r}$
+		\item $\overline{v} = \dot{r}\textbf{$\hat{u}_r$} + r\frac{d\textbf{$\hat{u}_r$}}{dt} = \dot{r}\textbf{$\hat{u}_r$} + r\dot{\theta}\textbf{$\hat{u}_\theta$} $
+		\item $v_r = \dot{r}$
+		\item $v_\theta = r\dot{\theta}$
+		\item $ \overline{a} = (\ddot{r} - r\dot{\theta}^2)\textbf{$\hat{u}_r$} + (r\ddot{\theta} + 2\dot{r}\dot{\theta})\textbf{$\hat{u}_\theta$} $
+		\item $a_r = (\ddot{r} - r\dot{\theta}^2) $
+		\item $a_\theta = (r\ddot{\theta} + 2\dot{r}\dot{\theta}) $
+		\item $\dot{r} = \dot{\theta}\frac{dr}{d\theta} $
+		\item $\ddot{r} = \dot{\theta}^2\frac{d^2r}{d\theta^2} + \ddot{\theta}\frac{dr}{d\theta}$
+		\item For 3D position, add z$\hat{k}$; take time derivatives for v \& a \\
+	\end{itemize}
+\textbf{Relating The Systems} 
+	\begin{itemize}
+		\item $\tan{\psi} = \frac{r d\theta}{dr} = \frac{r}{dr/d\theta} $
+		\item $ \psi = $angle between $ \hat{u_t} $ and $ \hat{u_r} ($or $ a_r $ and $ a_t) $
+		\item $\hat{u_r} = (\cos\theta)\hat{i} + (\sin\theta)\hat{j} $
+		\item $\hat{u_\theta} = -(\sin\theta)\hat{i} + (\cos\theta)\hat{j} $
+		\item $\overline{F} = F_r\hat{u_r} + F_\theta\hat{u_\theta}$
+	\end{itemize}
+\section{Disks}
+	\begin{itemize}
+		\item $\frac{T_2}{T_1} = e^{\mu\beta} $
+		\item $\beta = $ angle between ropes in radians 
+		\item $\cdot$ $T_2$ is in direction of motion 
+		\item $\Sigma M_{pin} = T_2r + T_1r + M = 0$ 
+	\end{itemize}
+\section{Rollling Resistance}
+	\begin{itemize}
+		\item $F_{RR} = mg\cos{\beta}\frac{\sin\theta}{\cos\theta} $
+		\item $mgdsin\beta - mg\cos\beta\tan\theta d = \frac{1}{2}mv_G^2 + \frac{1}{2}I_G\omega^2 $
+	\end{itemize}
+\section{Impacts}
+	\begin{itemize}
+		\item $e = \frac{(v_B)_2 - (v_A)_2}{(v_A)_1 - (v_B)_1} $
+		\item $m_A(v_A)_1 + m_B(v_B)_1 = m_A(v_A)_2 + m_B(v_B)_2$  (when no external impulses)
+		\item Tangent (no friction) - $(v_{BT})_1 = (v_{BT})_2, (v_{AT})_1 = (v_{AT})_2$ 
+	\end{itemize}
+\newpage
+\section{Center of Gravity}
+	\begin{itemize}
+		\item For uniform thickness/density, centroid = center of gravity
+		\item $\overline{r}_{G/P} = \frac{1}{m}\sum\limits_{i = 1}^{n}{(r_{i/P}\Delta{m_i})} = \frac{1}{m}\int{\overline{r}_p}dm $
+		\item Other forms: $\frac{1}{V}\int{\overline{r}_p}dV \hspace{5mm} \frac{1}{A}\int{\overline{r}_p}dA \hspace{5mm} \frac{1}{L}\int{\overline{r}_p}dL $ 
+		\item \textbf{Common Center of Gravity Formulas:}
+		\item Bar- $dA = h dx$ 
+		\item $A = \int dA = \int $height $ dx  $
+		\item $V = \int{dv} = \int{A dx}$
+		\item Wedge of circle- $dA = \frac{1}{2}r^2d\theta$ 
+		\item Rectangular prism- $dV = bh dz$
+		\item Cylinder- $dV = \pi(R_{out}^2 - R_{in}^2)dy$ 
+		\item Triangle- $x_{cm} = \frac{b}{3}, y_{cm} = \frac{h}{3}$ 
+		\item Semicircle- $x_{cm} = \frac{4r}{3\pi}$ \
+		\item Thin semicirclular wire = $\frac{2r}{\pi}$  
+		\item Thin wire \hspace{3mm} $dL = \sqrt{\frac{dy}{dx}^2 + 1}dx $
+		\item Volume for a 3D object- $dm = \rho dV, m = \rho V$ 
+		\item Area for a 2D object (flat plate)- $dm = \rho tdA, m = \rho tA $
+		\item Length for a 1D object (wire)- $dm = \rho A_cdL, m = \rho A_cL$
+		\item $dA = ($top curve$ - $bottom curve$)dx \hspace{5mm} x_{el} = x$
+		\item $y_{el} = $top$ - \frac{top - bottom}{2} = \frac{top + bottom}{2} $
+		\item $y_G = \frac{\int \frac{y}{2}dA}{A}$
+	\end{itemize}
+\section{Pulleys}
+	\begin{itemize}
+		\item $L_{rope} = S_A + S_B + $constants
+		\item $\dot{L} = V_A + V_B = 0, \ddot{L} = a_A + a_B = 0 $
+		\item Raising winch-$ \dot{L} = -\omega r$ 
+	\end{itemize}
+\section{3D Vector Systems}
+	\begin{itemize}
+		\item $\overline{F} = F\hat{\lambda} = F_x\hat{i} + F_y\hat{j} = F[\frac{F_x}{F}\hat{i} + \frac{F_y}{F}\hat{j}]  = F[\lambda_x\hat{i} + \lambda_y\hat{j}] $
+		\item Method 1: $ \overline{F} = F\cos\theta_x\hat{i} + F\cos\theta_y\hat{j} + F\cos\theta_z\hat{k} $
+		\item Method 2: $ \overline{F} = F\sin\theta_y\hat{i} + F\cos\theta_y\hat{j} + F\sin\theta_y\sin\theta_{xz}\hat{k} $
+		\item Method 3: $ \overline{F} = F[\frac{d\hat{i} + h\hat{j}}{\sqrt{d^2 + h^2}}] $
+		\item $\lambda_x = \frac{F_x}{F} = \cos{\theta_x}, $ same for y and z 
+	\end{itemize}
+\section{Axial, Shear, Bending Moment}
+	\begin{itemize}
+		\item $\frac{dM}{dx} = V, \frac{dV}{dx} = -w$
+		\item Single arrow is resultant force, double arrow is resultant couple \\\\\\\\
+	\end{itemize}
+\section{General}
+	\begin{itemize}
+		\item 1 hp $= 550 \frac{ft\cdot lb}{s} = 746 W $
+		\item Write directions and draw diagrams for all energy, momentum, etc.
+		\item $ F = ks$
+		\item Only one $\overline{\omega}$ and $\overline{\alpha}$ for a rigid body 
+		\item Imperial unit of mass- slugs 
+		\item Tires on ground generally have x \& y forces for friction 
+		\item Smooth = no friction 
+		\item Couple is written as one object on FBD (units of $N\cdot m$) 
+		\item For constant speed, $a_t = 0$ 
+		\item $\lambda$ is actually 2 angles- the one you solve for and one that adds 180 degrees 
+		\item Banking angle, no slip, no friction- $\theta = tan^{-1}\left(\frac{v^2}{g\rho}\right)$ 
+		\item $a\cdot ds = v\cdot dv$ 
+		\item Impending slip- $\mu_s = \mu_{s_{max}}$ 
+		\item $\overline{A} \cdot \overline{B} = AB\cos\theta $ 
+		\item Statically determine = same number of unknowns and equations 
+		\item Statically indeterminate = more unknowns than equations 
+		\item Unstable = no solution 
+		\item List whether forces are in tension or compression (for FBD, assume tension) 
+		\item Weight of distributed load acts at center 
+		\item Always draw free-body diagram and kinetic diagram 
+		\item Shear acts in opposite direction of moment 
+		\item Constant slip rate- use $\mu_k$  
+	\end{itemize}
+\end{multicols*}
+\end{document}
